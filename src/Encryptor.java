@@ -31,7 +31,7 @@
                 throw new Exception("Key must be between 0 and 256");
             }
             StringBuilder decryptedText = new StringBuilder();
-            int shift = key;
+            int shift = key % 26;
     
             for (char c : string.toCharArray()) {
                 if (Character.isLetter(c)) {
