@@ -46,7 +46,7 @@ public class App {
                                 scanner.nextLine();
                                 Encryptor encryptor = new Encryptor();
                                 String cipher = encryptor.substituteEncryptString(txtString, key);
-                                // System.out.println(cipher);
+                                System.out.println("Success");
                                 fileReader.writeToFile(cipher);
 
                                 break;
