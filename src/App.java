@@ -77,6 +77,46 @@ public class App {
 
                         System.out.println("Choose a method of decryption:");
 
+                        System.out.println("1. Caesar (substitution))");
+                        System.out.println("2. Rail Fence (transposition)");
+
+                        int methodChoice2 = scanner.nextInt();
+
+                        switch (methodChoice2) {
+                            case 1:
+
+                                System.out.println("Enter a key between 0 and 256:");
+                                int key = scanner.nextInt();
+                                scanner.nextLine();
+                                Encryptor encryptor = new Encryptor();
+                                String cipher = encryptor.substituteDecryptString(txtString, key);
+                                System.out.println("Success");
+                                fileReader.writeToFile(cipher);
+
+                                break;
+
+                            case 2:
+
+                                Encryptor encryptor2 = new Encryptor();
+                                String cipher2 = encryptor2.railFenceDecrypt(txtString);
+                                // System.out.println(cipher2);
+                                fileReader.writeToFile(cipher2);
+
+                                break;
+
+                            case 0:
+                                run = false;
+                                System.out.println("Goodbye!");
+                                scanner.close();
+                                return;
+
+                            default:
+                                System.out.println("Invalid choice");
+
+                                return;
+
+                        }
+
                         return;
                     default:
                         System.out.println("Invalid choice");

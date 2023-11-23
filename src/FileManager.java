@@ -37,13 +37,22 @@ public class FileManager {
     }
 
 
-    public void writeToFile(String text) throws IOException {
+    public void writeToFile(String text, String encryptOrDecrypt) throws IOException {
+
+    
 
         String outputDirectory = "output_files";
 
         String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 
-        String fileName = "encrypted" + timeStamp + ".txt";
+        String fileName = "";
+
+        if (encryptOrDecrypt.equals("encrypt")) {
+            fileName = "encrypted" + timeStamp + ".txt";
+        } else if (encryptOrDecrypt.equals("decrypt")) {
+            fileName = "decrypted" + timeStamp + ".txt";
+        }
+
 
         File directory = new File(outputDirectory);
 
