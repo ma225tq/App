@@ -59,7 +59,9 @@ public class Encryptor {
         public String railFenceEncrypt(String text) {
             StringBuilder topRail = new StringBuilder();
             StringBuilder bottomRail = new StringBuilder();
+            
         
+            // for each character in the string, append to the top rail if the index is even, and the bottom rail if the index is odd
             for (int i = 0; i < text.length(); i++) {
                 if (i % 2 == 0) {
                     topRail.append(text.charAt(i));
@@ -77,11 +79,7 @@ public class Encryptor {
         public String railFenceDecrypt(String text) {
             StringBuilder decryptedText = new StringBuilder();
 
-            // The length of the text is divided by 2 to get the midpoint
-            int mid = text.length() / 2;
-
-            // Characters at even indices are appended to the top rail.
-            // Characters at odd indices are appended to the bottom rail. 
+            int mid = text.length() / 2; // since there are two rails, the middle is half the length of the string
         
             for (int i = 0; i < mid; i++) {
                 decryptedText.append(text.charAt(i));
