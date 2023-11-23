@@ -55,7 +55,7 @@ public class App {
 
                                 Encryptor encryptor2 = new Encryptor();
                                 String cipher2 = encryptor2.railFenceEncrypt(txtString);
-                                // System.out.println(cipher2);
+
                                 fileReader.writeToFile(cipher2, "encrypt");
 
                                 break;
@@ -99,7 +99,6 @@ public class App {
 
                                 Encryptor encryptor2 = new Encryptor();
                                 String cipher2 = encryptor2.railFenceDecrypt(txtString);
-                                // System.out.println(cipher2);
                                 fileReader.writeToFile(cipher2, "decrypt");
 
                                 break;
