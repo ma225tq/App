@@ -15,7 +15,6 @@ public class App {
                 System.out.println("Welcome the the Encryptor!");
                 System.out.println("Enter the path to the txt file you want to encrypt or decrypt:");
                 String path = scanner.nextLine();
-
                 FileManager fileReader = new FileManager();
 
                 String txtString = fileReader.readFileBuffered(path);

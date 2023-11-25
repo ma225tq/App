@@ -3,26 +3,14 @@ import java.nio.file.Paths;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
 public class FileManager {
-
-    // public String readFile(String filePath) throws Exception {
-    // try {
-    // return new String(Files.readAllBytes(Paths.get(filePath)));
-    // } catch (Exception e) {
-    // throw new IOException("File not found");
-    // }
-
-    // }
 
     public String readFileBuffered(String filePath) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();

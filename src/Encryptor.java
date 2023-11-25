@@ -1,8 +1,6 @@
-import javax.xml.stream.events.Characters;
-
 public class Encryptor {
 
-        // Caesar method
+        // Substitution method (Caesar cipher)
     
         public String substituteEncryptString(String string, int key) throws Exception {
             StringBuilder cipher = new StringBuilder();
@@ -13,7 +11,7 @@ public class Encryptor {
                 throw new Exception("Key must be between 0 and 256");
             }
 
-            //ensure the key is within the range of the alphabet
+            // ensure the key is within the range of the alphabet
 
             int shift = key % 26;
 
@@ -56,6 +54,7 @@ public class Encryptor {
         }
     
         // transposition method
+
         public String railFenceEncrypt(String text) {
             StringBuilder topRail = new StringBuilder();
             StringBuilder bottomRail = new StringBuilder();
