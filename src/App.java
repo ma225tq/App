@@ -19,7 +19,7 @@ public class App {
                 FileManager fileReader = new FileManager();
 
                 String txtString = fileReader.readFileBuffered(path);
-                // C:\Users\melke\Documents\lnu\1dv700\StringToEncrypt.txt
+
 
                 System.out.println("Encrypt or decrypt?");
 
